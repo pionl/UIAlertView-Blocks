@@ -58,6 +58,13 @@ Alternatively you can also use a single line to create buttons and declare the a
 		                                   // Handle "Delete"
 				                        }], nil] show];
 
+Also you can show the AlertView via class method: 
+	+ (id)showWithTitle:(NSString *)inTitle message:(NSString *)inMessage cancelButtonItem:(RIButtonItem *)inCancelButtonItem otherButtonItems:(RIButtonItem *)inOtherButtonItems
+
+For error with error title you can use:
+	+ (id)errorWithMessage:(NSString*)message title:(NSString*)title 
+or with message
+	+ (id)errorWithMessage:(NSString*)message;
 
 Again, this is designed to be fire and forget, so you initialize it, show it, and release it.  It'll take care of cleaning up after itself.
 
